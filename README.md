@@ -11,8 +11,8 @@
    ```
    
    解决方案：==重新安装OpenCV==
-        1. 把opencv目录下build中的内容全部删掉
-        2. 在build中输入 `cmake ..`
-        3. 然后输入 `make -j4`
-        4. 输入`sudo make install`
+    1. 把opencv目录下build中的内容全部删掉
+    2. 在build中输入 `cmake ..`
+    3. 然后输入 `make -j4`
+    4. 输入`sudo make install`
    
