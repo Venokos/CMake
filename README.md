@@ -1,7 +1,10 @@
 # 如果报错
 
 1. 如果提示 不存在opencv：
-    在`colorful_hello.h`中 把所有` <opencv/opencv.hpp> `替换为`<opencv2/opencv.hpp>`
+    在`colorful_hello.h`中，把所有
+    ` <opencv/opencv.hpp> `
+    替换为
+    `<opencv2/opencv.hpp>`
 2. 如果提示 类似:
    ```
    terminate called after throwing an instance of 'cv::Exception'
