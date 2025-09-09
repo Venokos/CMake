@@ -1,6 +1,6 @@
 # CMake简单使用
 
-1. 基础命令
+1. Ubuntu 基础命令
    - mkdir 创建文件夹 *make directory*
    - touch 创建文件 *本义为**更新一个文件或目录的访问和修改时间戳***
    - cd 改变工作目录 *change directory*
