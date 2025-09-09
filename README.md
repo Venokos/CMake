@@ -1,58 +1,16 @@
-# CMake简单使用
+# 如果报错
 
-1. Ubuntu 基础命令
-   - mkdir 创建文件夹 *make directory*
-   - touch 创建文件 *本义为**更新一个文件或目录的访问和修改时间戳***
-   - cd 改变工作目录 *change directory*
-   - pwd 浏览当前工作目录 *print working directory*
-   - sudo 以超级用户身份执行 *SuperUser Do*
-   - cp 复制 *copy*
-   - mv 移动 *move*
-   - rm 移除 *remove*
-   - 在shell中 `. `表示当前目录，` .. `表示上一级目录
-  2. 一般使用方法
-     1. 在<u>项目根目录</u>中创建文件
-         ```
-         mkdir cmake_example
-        cd cmake_example
-        touch main.cpp CMakeLists.txt
-         ```
-     2. 在main.cpp[^1]和CMakeLists.txt[^2]中写入代码
-        
-     3. 命令行执行  `cmake .` *确保工作目录为<u>项目根目录</u>*
-      此时会出现这些文件：
-         ```
-         CMakeCache.txt 
-         CMakeFiles 
-         cmake_install.cmake 
-         Makefile
-         ````
-        *Makefile详见[^3]*
-     4. 输入`make -j4`  *-j4 表示最多允许使用4个cpu核心* 
-      运行后会在当前目录生成一个==可执行文件==`cmake_expamle`[^4]
-     5. 执行该可执行文件 
-        `./cmake_expamle`
-     6. 若输出成功 则成功用cmake编译运行了一个cpp程序
+1. 如果提示 不存在opencv：
+    在`colorful_hello.h`中 把所有` <opencv/opencv.hpp> `替换为`<opencv2/opencv.hpp>`
+2. 如果提示 类似:
+   ```
+   terminate called after throwing an instance of 'cv::Exception'
+  what():  OpenCV(4.12.0) /home/venokos/Documents/opencv/modules/highgui/src/window.cpp:1301: error: (-2:Unspecified error) The function is not implemented. Rebuild the library with      Windows, GTK+ 2.x or Cocoa support. If you are on Ubuntu or Debian, install libgtk2.0-dev and pkg-config, then re-run cmake or configure script in function 'cvShowImage'
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-[^1]:写cpp要在  `.cpp, .h, .hpp ` 等⽂件中写
-[^2]:`CMakeLists.txt`是CMake的配置⽂件，⽤于描述项⽬的构建流程，⽐如源⽂件的路径，编译选项，依赖库，⽣成器，测试，安装等等。
-[^3]: `Makefile`是CMake根据`CMakeLists.txt`⽣成的编译⽂件，此时执⾏ `make` 命令即可编译
-[^4]:这里可能是代码中打错字了，导致生成的可处理文件是expamle而不是example
+  Aborted (core dumped)
+  ```
+   解决方案：==重新安装OpenCV==
+        1. 把opencv目录下build中的内容全部删掉
+        2. 在build中输入 `cmake ..`
+        3. 然后输入 `make -j4`
+        4. 输入`sudo make install`
