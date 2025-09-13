@@ -55,4 +55,4 @@
 [^1]:写cpp要在  `.cpp, .h, .hpp ` 等⽂件中写
 [^2]:`CMakeLists.txt`是CMake的配置⽂件，⽤于描述项⽬的构建流程，⽐如源⽂件的路径，编译选项，依赖库，⽣成器，测试，安装等等
 [^3]: `Makefile`是CMake根据`CMakeLists.txt`⽣成的编译⽂件，此时执⾏ `make` 命令即可编译
-[^4]:这里可能是代码中打错字了，导致生成的可处理文件是expamle而不是example
+[^4]:这里可能是代码中打错字了，导致生成的可处理文件是expamle而不是example  ***在第三分支（添加外部库colorful）中已上传修正版本***
